@@ -22,15 +22,15 @@ public class ArchitectureExtensionsBlocks {
     //public static final CircleCorner STONE_BRICK_CIRCLE_CORNER = new CircleCorner(QuiltBlockSettings.of(Material.STONE).strength(2.5f).nonOpaque().requiresTool());
 
     // Columns
-    public static final ColumnBlock STONE_COLUMN = new ColumnBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
-    public static final ColumnBlock GRANITE_COLUMN = new ColumnBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
-    public static final ColumnBlock DIORITE_COLUMN = new ColumnBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
-    public static final ColumnBlock ANDESITE_COLUMN = new ColumnBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
-    public static final ColumnBlock COBBLED_DEEPSLATE_COLUMN = new ColumnBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).sounds(BlockSoundGroup.DEEPSLATE).requiresTool());
-    public static final ColumnBlock POLISHED_DEEPSLATE_COLUMN = new ColumnBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).sounds(BlockSoundGroup.POLISHED_DEEPSLATE).requiresTool());
-    public static final ColumnBlock COBBLESTONE_COLUMN = new ColumnBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
-    public static final ColumnBlock SANDSTONE_COLUMN = new ColumnBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
-    public static final ColumnBlock RED_SANDSTONE_COLUMN = new ColumnBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
+    //public static final ColumnBlock STONE_COLUMN = new ColumnBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
+    //public static final ColumnBlock GRANITE_COLUMN = new ColumnBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
+    //public static final ColumnBlock DIORITE_COLUMN = new ColumnBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
+    //public static final ColumnBlock ANDESITE_COLUMN = new ColumnBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
+    //public static final ColumnBlock COBBLED_DEEPSLATE_COLUMN = new ColumnBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).sounds(BlockSoundGroup.DEEPSLATE).requiresTool());
+    //public static final ColumnBlock POLISHED_DEEPSLATE_COLUMN = new ColumnBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).sounds(BlockSoundGroup.POLISHED_DEEPSLATE).requiresTool());
+    //public static final ColumnBlock COBBLESTONE_COLUMN = new ColumnBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
+    //public static final ColumnBlock SANDSTONE_COLUMN = new ColumnBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
+    //public static final ColumnBlock RED_SANDSTONE_COLUMN = new ColumnBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
     public static final ColumnBlock BRICK_COLUMN = new ColumnBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
     public static final ColumnBlock MOSSY_COBBLESTONE_COLUMN = new ColumnBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
     public static final ColumnBlock STONE_BRICK_COLUMN = new ColumnBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
@@ -48,14 +48,14 @@ public class ArchitectureExtensionsBlocks {
     public static final ColumnBlock POLISHED_BLACKSTONE_BRICK_COLUMN = new ColumnBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
 
     // Post Blocks
-    public static final WallPostBlock GRANITE_POST = new WallPostBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
-    public static final WallPostBlock DIORITE_POST = new WallPostBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
-    public static final WallPostBlock ANDESITE_POST = new WallPostBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
-    public static final WallPostBlock COBBLED_DEEPSLATE_POST = new WallPostBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).sounds(BlockSoundGroup.DEEPSLATE).requiresTool());
-    public static final WallPostBlock POLISHED_DEEPSLATE_POST = new WallPostBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).sounds(BlockSoundGroup.POLISHED_DEEPSLATE).requiresTool());
-    public static final WallPostBlock COBBLESTONE_POST = new WallPostBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
-    public static final WallPostBlock SANDSTONE_POST = new WallPostBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
-    public static final WallPostBlock RED_SANDSTONE_POST = new WallPostBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
+    //public static final WallPostBlock GRANITE_POST = new WallPostBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
+    //public static final WallPostBlock DIORITE_POST = new WallPostBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
+    //public static final WallPostBlock ANDESITE_POST = new WallPostBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
+    //public static final WallPostBlock COBBLED_DEEPSLATE_POST = new WallPostBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).sounds(BlockSoundGroup.DEEPSLATE).requiresTool());
+    //public static final WallPostBlock POLISHED_DEEPSLATE_POST = new WallPostBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).sounds(BlockSoundGroup.POLISHED_DEEPSLATE).requiresTool());
+    //public static final WallPostBlock COBBLESTONE_POST = new WallPostBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
+    //public static final WallPostBlock SANDSTONE_POST = new WallPostBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
+    //public static final WallPostBlock RED_SANDSTONE_POST = new WallPostBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
     public static final WallPostBlock BRICK_POST = new WallPostBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
     public static final WallPostBlock MOSSY_COBBLESTONE_POST = new WallPostBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
     public static final WallPostBlock STONE_BRICK_POST = new WallPostBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
@@ -72,14 +72,14 @@ public class ArchitectureExtensionsBlocks {
     public static final WallPostBlock POLISHED_BLACKSTONE_POST = new WallPostBlock(QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
 
     // Roof Blocks
-    public static final RoofBlock GRANITE_ROOF = new RoofBlock(Blocks.COBBLESTONE.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
-    public static final RoofBlock DIORITE_ROOF = new RoofBlock(Blocks.COBBLESTONE.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
-    public static final RoofBlock ANDESITE_ROOF = new RoofBlock(Blocks.COBBLESTONE.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
-    public static final RoofBlock COBBLED_DEEPSLATE_ROOF = new RoofBlock(Blocks.COBBLESTONE.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).sounds(BlockSoundGroup.DEEPSLATE).requiresTool());
-    public static final RoofBlock POLISHED_DEEPSLATE_ROOF = new RoofBlock(Blocks.COBBLESTONE.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).strength(2.5f).sounds(BlockSoundGroup.POLISHED_DEEPSLATE).requiresTool());
-    public static final RoofBlock COBBLESTONE_ROOF = new RoofBlock(Blocks.COBBLESTONE.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
-    public static final RoofBlock SANDSTONE_ROOF = new RoofBlock(Blocks.COBBLESTONE.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
-    public static final RoofBlock RED_SANDSTONE_ROOF = new RoofBlock(Blocks.COBBLESTONE.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
+    //public static final RoofBlock GRANITE_ROOF = new RoofBlock(Blocks.COBBLESTONE.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
+    //public static final RoofBlock DIORITE_ROOF = new RoofBlock(Blocks.COBBLESTONE.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
+    //public static final RoofBlock ANDESITE_ROOF = new RoofBlock(Blocks.COBBLESTONE.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
+    //public static final RoofBlock COBBLED_DEEPSLATE_ROOF = new RoofBlock(Blocks.COBBLESTONE.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).sounds(BlockSoundGroup.DEEPSLATE).requiresTool());
+    //public static final RoofBlock POLISHED_DEEPSLATE_ROOF = new RoofBlock(Blocks.COBBLESTONE.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).strength(2.5f).sounds(BlockSoundGroup.POLISHED_DEEPSLATE).requiresTool());
+    //public static final RoofBlock COBBLESTONE_ROOF = new RoofBlock(Blocks.COBBLESTONE.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
+    //public static final RoofBlock SANDSTONE_ROOF = new RoofBlock(Blocks.COBBLESTONE.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
+    //public static final RoofBlock RED_SANDSTONE_ROOF = new RoofBlock(Blocks.COBBLESTONE.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
     public static final RoofBlock BRICK_ROOF = new RoofBlock(Blocks.COBBLESTONE.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
     public static final RoofBlock MOSSY_COBBLESTONE_ROOF = new RoofBlock(Blocks.COBBLESTONE.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
     public static final RoofBlock STONE_BRICK_ROOF = new RoofBlock(Blocks.STONE_BRICKS.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
@@ -96,14 +96,14 @@ public class ArchitectureExtensionsBlocks {
     public static final RoofBlock POLISHED_BLACKSTONE_ROOF = new RoofBlock(Blocks.COBBLESTONE.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
 
     // Arch Blocks
-    public static final ArchBlock GRANITE_ARCH = new ArchBlock(Blocks.STONE_BRICKS.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
-    public static final ArchBlock DIORITE_ARCH = new ArchBlock(Blocks.STONE_BRICKS.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
-    public static final ArchBlock ANDESITE_ARCH = new ArchBlock(Blocks.STONE_BRICKS.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
-    public static final ArchBlock COBBLED_DEEPSLATE_ARCH = new ArchBlock(Blocks.STONE_BRICKS.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
-    public static final ArchBlock POLISHED_DEEPSLATE_ARCH = new ArchBlock(Blocks.STONE_BRICKS.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
-    public static final ArchBlock COBBLESTONE_ARCH = new ArchBlock(Blocks.STONE_BRICKS.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
-    public static final ArchBlock SANDSTONE_ARCH = new ArchBlock(Blocks.STONE_BRICKS.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
-    public static final ArchBlock RED_SANDSTONE_ARCH = new ArchBlock(Blocks.STONE_BRICKS.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
+    //public static final ArchBlock GRANITE_ARCH = new ArchBlock(Blocks.STONE_BRICKS.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
+    //public static final ArchBlock DIORITE_ARCH = new ArchBlock(Blocks.STONE_BRICKS.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
+    //public static final ArchBlock ANDESITE_ARCH = new ArchBlock(Blocks.STONE_BRICKS.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
+    //public static final ArchBlock COBBLED_DEEPSLATE_ARCH = new ArchBlock(Blocks.STONE_BRICKS.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
+    //public static final ArchBlock POLISHED_DEEPSLATE_ARCH = new ArchBlock(Blocks.STONE_BRICKS.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
+    //public static final ArchBlock COBBLESTONE_ARCH = new ArchBlock(Blocks.STONE_BRICKS.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
+    //public static final ArchBlock SANDSTONE_ARCH = new ArchBlock(Blocks.STONE_BRICKS.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
+    //public static final ArchBlock RED_SANDSTONE_ARCH = new ArchBlock(Blocks.STONE_BRICKS.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
     public static final ArchBlock BRICK_ARCH = new ArchBlock(Blocks.STONE_BRICKS.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
     public static final ArchBlock MOSSY_COBBLESTONE_ARCH = new ArchBlock(Blocks.STONE_BRICKS.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
     public static final ArchBlock STONE_BRICK_ARCH = new ArchBlock(Blocks.STONE_BRICKS.getDefaultState(), QuiltBlockSettings.of(Material.STONE).strength(2.5f).requiresTool());
@@ -194,17 +194,61 @@ public class ArchitectureExtensionsBlocks {
     public static final Block DEBUGGY_BLOCK = new Block(QuiltBlockSettings.of(Material.WOOL).strength(1f).sounds(BlockSoundGroup.WOOL).requiresTool());
     public static final Block FAKE_END_PORTAL_BLOCK = new Block(QuiltBlockSettings.of(Material.WOOL).strength(1f).sounds(BlockSoundGroup.WOOL).requiresTool());
 
-    static {
+    public static final BlockGroup STONE = BlockGroup.builder("stone", Blocks.STONE)
+            .withColumn()
+            .build();
+    
+    public static final BlockGroup GRANITE = BlockGroup.builder("granite", Blocks.GRANITE)
+            .withColumn().withPost().withRoof().withArch()
+            .build();
+    
+    public static final BlockGroup DIORITE = BlockGroup.builder("diorite", Blocks.DIORITE)
+            .withColumn().withPost().withRoof().withArch()
+            .build();
+    
+    public static final BlockGroup ANDESITE = BlockGroup.builder("andesite", Blocks.ANDESITE)
+            .withColumn().withPost().withRoof().withArch()
+            .build();
+    
+    public static final BlockGroup COBBLED_DEEPSLATE = BlockGroup.builder("cobbled_deepslate", Blocks.COBBLED_DEEPSLATE)
+            .withColumn().withPost().withRoof().withArch()
+            .build();
+    
+    public static final BlockGroup POLISHED_DEEPSLATE = BlockGroup.builder("polished_deepslate", Blocks.POLISHED_DEEPSLATE)
+            .withColumn().withPost().withRoof().withArch()
+            .build();
+    
+    public static final BlockGroup COBBLESTONE = BlockGroup.builder("cobblestone", Blocks.COBBLESTONE)
+            .withColumn().withPost().withRoof().withArch()
+            .build();
+    
+    public static final BlockGroup SANDSTONE = BlockGroup.builder("sandstone", Blocks.SANDSTONE)
+            .withColumn().withPost().withRoof().withArch()
+            .build();
+    
+    public static final BlockGroup RED_SANDSTONE = BlockGroup.builder("red_sandstone", Blocks.RED_SANDSTONE)
+            .withColumn().withPost().withRoof().withArch()
+            .build();
+    
+    public static BlockGroup[] GROUPS = {
+            STONE, GRANITE, DIORITE, ANDESITE,
+            COBBLED_DEEPSLATE, POLISHED_DEEPSLATE,
+            COBBLESTONE, 
+    };
+    
+    public static void init() {
+        
+        
         Map<String, Block> blocks = new LinkedHashMap<>();
-            blocks.put("stone_column", STONE_COLUMN);
-            blocks.put("granite_column", GRANITE_COLUMN);
-            blocks.put("diorite_column", DIORITE_COLUMN);
-            blocks.put("andesite_column", ANDESITE_COLUMN);
-            blocks.put("cobbled_deepslate_column", COBBLED_DEEPSLATE_COLUMN);
-            blocks.put("polished_deepslate_column", POLISHED_DEEPSLATE_COLUMN);
-            blocks.put("cobblestone_column", COBBLESTONE_COLUMN);
-            blocks.put("sandstone_column", SANDSTONE_COLUMN);
-            blocks.put("red_sandstone_column", RED_SANDSTONE_COLUMN);
+            //blocks.put("stone_column", STONE_COLUMN);
+            //blocks.put("granite_column", GRANITE_COLUMN);
+            //blocks.put("diorite_column", DIORITE_COLUMN);
+            //blocks.put("andesite_column", ANDESITE_COLUMN);
+            //blocks.put("cobbled_deepslate_column", COBBLED_DEEPSLATE_COLUMN);
+            //blocks.put("polished_deepslate_column", POLISHED_DEEPSLATE_COLUMN);
+            //blocks.put("cobblestone_column", COBBLESTONE_COLUMN);
+            //blocks.put("sandstone_column", SANDSTONE_COLUMN);
+            //blocks.put("red_sandstone_column", RED_SANDSTONE_COLUMN);
             blocks.put("brick_column", BRICK_COLUMN);
             blocks.put("mossy_cobblestone_column", MOSSY_COBBLESTONE_COLUMN);
             blocks.put("stone_brick_column", STONE_BRICK_COLUMN);
@@ -220,14 +264,14 @@ public class ArchitectureExtensionsBlocks {
             blocks.put("blackstone_column", BLACKSTONE_COLUMN);
             blocks.put("polished_blackstone_column", POLISHED_BLACKSTONE_COLUMN);
             blocks.put("polished_blackstone_brick_column", POLISHED_BLACKSTONE_BRICK_COLUMN);
-            blocks.put("granite_post", GRANITE_POST);
-            blocks.put("diorite_post", DIORITE_POST);
-            blocks.put("andesite_post", ANDESITE_POST);
-            blocks.put("cobbled_deepslate_post", COBBLED_DEEPSLATE_POST);
-            blocks.put("polished_deepslate_post", POLISHED_DEEPSLATE_POST);
-            blocks.put("cobblestone_post", COBBLESTONE_POST);
-            blocks.put("sandstone_post", SANDSTONE_POST);
-            blocks.put("red_sandstone_post", RED_SANDSTONE_POST);
+            //blocks.put("granite_post", GRANITE_POST);
+            //blocks.put("diorite_post", DIORITE_POST);
+            //blocks.put("andesite_post", ANDESITE_POST);
+            //blocks.put("cobbled_deepslate_post", COBBLED_DEEPSLATE_POST);
+            //blocks.put("polished_deepslate_post", POLISHED_DEEPSLATE_POST);
+            //blocks.put("cobblestone_post", COBBLESTONE_POST);
+            //blocks.put("sandstone_post", SANDSTONE_POST);
+            //blocks.put("red_sandstone_post", RED_SANDSTONE_POST);
             blocks.put("brick_post", BRICK_POST);
             blocks.put("mossy_cobblestone_post", MOSSY_COBBLESTONE_POST);
             blocks.put("stone_brick_post", STONE_BRICK_POST);
@@ -242,14 +286,14 @@ public class ArchitectureExtensionsBlocks {
             blocks.put("blackstone_post", BLACKSTONE_POST);
             blocks.put("polished_blackstone_brick_post", POLISHED_BLACKSTONE_BRICK_POST);
             blocks.put("polished_blackstone_post", POLISHED_BLACKSTONE_POST);
-            blocks.put("granite_roof", GRANITE_ROOF);
-            blocks.put("diorite_roof", DIORITE_ROOF);
-            blocks.put("andesite_roof", ANDESITE_ROOF);
-            blocks.put("cobbled_deepslate_roof", COBBLED_DEEPSLATE_ROOF);
-            blocks.put("polished_deepslate_roof", POLISHED_DEEPSLATE_ROOF);
-            blocks.put("cobblestone_roof", COBBLESTONE_ROOF);
-            blocks.put("sandstone_roof", SANDSTONE_ROOF);
-            blocks.put("red_sandstone_roof", RED_SANDSTONE_ROOF);
+            //blocks.put("granite_roof", GRANITE_ROOF);
+            //blocks.put("diorite_roof", DIORITE_ROOF);
+            //blocks.put("andesite_roof", ANDESITE_ROOF);
+            //blocks.put("cobbled_deepslate_roof", COBBLED_DEEPSLATE_ROOF);
+            //blocks.put("polished_deepslate_roof", POLISHED_DEEPSLATE_ROOF);
+            //blocks.put("cobblestone_roof", COBBLESTONE_ROOF);
+            //blocks.put("sandstone_roof", SANDSTONE_ROOF);
+            //blocks.put("red_sandstone_roof", RED_SANDSTONE_ROOF);
             blocks.put("brick_roof", BRICK_ROOF);
             blocks.put("mossy_cobblestone_roof", MOSSY_COBBLESTONE_ROOF);
             blocks.put("stone_brick_roof", STONE_BRICK_ROOF);
@@ -264,14 +308,14 @@ public class ArchitectureExtensionsBlocks {
             blocks.put("blackstone_roof", BLACKSTONE_ROOF);
             blocks.put("polished_blackstone_brick_roof", POLISHED_BLACKSTONE_BRICK_ROOF);
             blocks.put("polished_blackstone_roof", POLISHED_BLACKSTONE_ROOF);
-            blocks.put("granite_arch", GRANITE_ARCH);
-            blocks.put("diorite_arch", DIORITE_ARCH);
-            blocks.put("andesite_arch", ANDESITE_ARCH);
-            blocks.put("cobbled_deepslate_arch", COBBLED_DEEPSLATE_ARCH);
-            blocks.put("polished_deepslate_arch", POLISHED_DEEPSLATE_ARCH);
-            blocks.put("cobblestone_arch", COBBLESTONE_ARCH);
-            blocks.put("sandstone_arch", SANDSTONE_ARCH);
-            blocks.put("red_sandstone_arch", RED_SANDSTONE_ARCH);
+            //blocks.put("granite_arch", GRANITE_ARCH);
+            //blocks.put("diorite_arch", DIORITE_ARCH);
+            //blocks.put("andesite_arch", ANDESITE_ARCH);
+            //blocks.put("cobbled_deepslate_arch", COBBLED_DEEPSLATE_ARCH);
+            //blocks.put("polished_deepslate_arch", POLISHED_DEEPSLATE_ARCH);
+            //blocks.put("cobblestone_arch", COBBLESTONE_ARCH);
+            //blocks.put("sandstone_arch", SANDSTONE_ARCH);
+            //blocks.put("red_sandstone_arch", RED_SANDSTONE_ARCH);
             blocks.put("brick_arch", BRICK_ARCH);
             blocks.put("mossy_cobblestone_arch", MOSSY_COBBLESTONE_ARCH);
             blocks.put("stone_brick_arch", STONE_BRICK_ARCH);
@@ -354,7 +398,15 @@ public class ArchitectureExtensionsBlocks {
             Registry.register(Registry.ITEM, new Identifier("architecture_extensions", entry.getKey()),
                     new BlockItem(entry.getValue(), new QuiltItemSettings().group(ItemGroup.DECORATIONS)));
         }
+        
+        for(BlockGroup group : GROUPS) register(group);
     }
-
-    public static void init() {}
+    
+    public static void register(BlockGroup group) {
+        for (Map.Entry<String, Block> entry : group.getAllMapped().entrySet()) {
+            Registry.register(Registry.BLOCK, new Identifier("architecture_extensions", entry.getKey()), entry.getValue());
+            Registry.register(Registry.ITEM, new Identifier("architecture_extensions", entry.getKey()),
+                    new BlockItem(entry.getValue(), new QuiltItemSettings().group(ItemGroup.DECORATIONS)));
+        }
+    }
 }
