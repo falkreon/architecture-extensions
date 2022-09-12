@@ -233,7 +233,7 @@ public class ArchitectureExtensionsBlocks {
     public static BlockGroup[] GROUPS = {
             STONE, GRANITE, DIORITE, ANDESITE,
             COBBLED_DEEPSLATE, POLISHED_DEEPSLATE,
-            COBBLESTONE, 
+            COBBLESTONE, SANDSTONE, RED_SANDSTONE,
     };
     
     public static void init() {
