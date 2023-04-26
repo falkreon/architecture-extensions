@@ -1,0 +1,19 @@
+{
+    "variants": {
+        "axis=x,down=false,hinge=minus,swing=closed,up=false": {
+            "model": "architecture_extensions:block/peculiar/test_door",
+            "y": 180
+        },
+        "axis=z,down=false,hinge=minus,swing=closed,up=false": {
+            "model": "architecture_extensions:block/peculiar/test_door",
+            "y": 270
+        },
+        "axis=x,down=false,hinge=plus,swing=closed,up=false": {
+            "model": "architecture_extensions:block/peculiar/test_door"
+        },
+        "axis=z,down=false,hinge=plus,swing=closed,up=false": {
+            "model": "architecture_extensions:block/peculiar/test_door",
+            "y": 90
+        }
+    }
+}

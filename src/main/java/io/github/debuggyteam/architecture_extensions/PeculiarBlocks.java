@@ -3,7 +3,9 @@ package io.github.debuggyteam.architecture_extensions;
 import org.quiltmc.qsl.block.extensions.api.QuiltBlockSettings;
 import org.quiltmc.qsl.item.setting.api.QuiltItemSettings;
 
+import io.github.debuggyteam.architecture_extensions.blocks.BigDoorBlock;
 import net.minecraft.block.Block;
+import net.minecraft.block.Blocks;
 import net.minecraft.block.EndRodBlock;
 import net.minecraft.block.Material;
 import net.minecraft.item.BlockItem;
@@ -30,5 +32,6 @@ public class PeculiarBlocks {
 		registerBlock(ArchitectureExtensions.id("end_rod_nubless"), END_ROD_NUBLESS);
 		registerBlock(ArchitectureExtensions.id("debuggy_block"), DEBUGGY_BLOCK);
 		registerBlock(ArchitectureExtensions.id("fake_end_portal_block"), FAKE_END_PORTAL_BLOCK);
+		registerBlock(ArchitectureExtensions.id("test_door"), new BigDoorBlock(QuiltBlockSettings.copyOf(Blocks.OAK_DOOR)));
 	}
 }
