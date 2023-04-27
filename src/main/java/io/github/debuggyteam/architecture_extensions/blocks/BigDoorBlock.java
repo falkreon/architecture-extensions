@@ -3,37 +3,31 @@ package io.github.debuggyteam.architecture_extensions.blocks;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockState;
 import net.minecraft.block.ShapeContext;
+import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
 import net.minecraft.state.StateManager.Builder;
-import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.EnumProperty;
-import net.minecraft.state.property.Properties;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
 import net.minecraft.util.StringIdentifiable;
+import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
 import net.minecraft.world.BlockView;
+import net.minecraft.world.World;
 
 public class BigDoorBlock extends Block {
+	private static final int MAX_SEARCH_DISTANCE = 8; // TODO: This can be moved to config
+	
 	/**
-	 * true if there is a compatible/connected BigDoorBlock above this one
-	 */
-	public static final BooleanProperty UP = Properties.UP;
-	/**
-	 * true if there is a compatible/connected BigDoorBlock below this one
-	 */
-	public static final BooleanProperty DOWN = Properties.DOWN;
-	/**
-	 * The direction the door is currently swung in, or CLOSED if the door is closed.
+	 * The direction the door is currently swung in, left or right (from a perspective behind the hinge).
 	 * @see Swing
 	 */
 	public static final EnumProperty<Swing> SWING = EnumProperty.of("swing", Swing.class);
+	
 	/**
-	 * The axis the face of the door extends along. "axis=z" means the door extends north-to-south.
-	 */
-	public static final EnumProperty<Direction.Axis> AXIS = Properties.HORIZONTAL_AXIS;
-	/**
-	 * The side of the door the hinge is on.
+	 * The corner of the block that the hinge sits in.
 	 * @see Hinge
 	 */
 	public static final EnumProperty<Hinge> HINGE = EnumProperty.of("hinge", Hinge.class);
@@ -45,52 +39,53 @@ public class BigDoorBlock extends Block {
 	@Override
 	protected void appendProperties(Builder<Block, BlockState> builder) {
 		super.appendProperties(builder);
-		builder.add(UP, DOWN, SWING, AXIS, HINGE);
+		builder.add(HINGE, SWING);
 	}
 	
 	@Override
 	public VoxelShape getCollisionShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-		Direction.Axis axis = state.get(AXIS);
-		Direction doorPlane = (state.get(AXIS)==Direction.Axis.X) ? Direction.EAST : Direction.SOUTH;
-		Direction swingPlane = doorPlane.rotateYClockwise();
+		Direction planeDir = state.get(HINGE).getPlane(state.get(SWING));
+		Direction thicknessDir = state.get(HINGE).getOpposing(state.get(SWING));
 		
-		int minX = 0;
-		int minZ = 0;
-		int maxX = 16;
-		int maxZ = 16;
+		int minX = state.get(HINGE).cornerX();
+		int minZ = state.get(HINGE).cornerZ();
+		int maxX = minX;
+		int maxZ = minZ;
 		
-		if (state.get(HINGE)==Hinge.MINUS) {
-			maxX += 16 * doorPlane.getOffsetX();
-			maxZ += 16 * doorPlane.getOffsetZ();
-		} else {
-			minX -= 16 * doorPlane.getOffsetX();
-			minZ -= 16 * doorPlane.getOffsetZ();
-		}
+		int edgeX = minX + (planeDir.getOffsetX() * 32);
+		int edgeZ = minZ + (planeDir.getOffsetZ() * 32);
 		
-		minX += doorPlane.getOffsetZ() * 6;
-		maxX -= doorPlane.getOffsetZ() * 6;
-		minZ += doorPlane.getOffsetX() * 6;
-		maxZ -= doorPlane.getOffsetX() * 6;
+		edgeX += thicknessDir.getOffsetX() * 4;
+		edgeZ += thicknessDir.getOffsetZ() * 4;
+		
+		minX = Math.min(minX, edgeX);
+		maxX = Math.max(maxX, edgeX);
+		minZ = Math.min(minZ, edgeZ);
+		maxZ = Math.max(maxZ, edgeZ);
 		
 		return Block.createCuboidShape(minX, 0, minZ, maxX, 16, maxZ);
 	}
 	
 	@Override
 	public VoxelShape getOutlineShape(BlockState state, BlockView world, BlockPos pos, ShapeContext context) {
-		Direction.Axis axis = state.get(AXIS);
-		Direction doorPlane = (state.get(AXIS)==Direction.Axis.X) ? Direction.EAST : Direction.SOUTH;
-		Direction swingPlane = doorPlane.rotateYClockwise();
+		Direction planeDir = state.get(HINGE).getPlane(state.get(SWING));
+		Direction thicknessDir = state.get(HINGE).getOpposing(state.get(SWING));
 		
-		//Just create the box that can actually be moused over / clicked
-		int minX = 0;
-		int minZ = 0;
-		int maxX = 16;
-		int maxZ = 16;
+		int minX = state.get(HINGE).cornerX();
+		int minZ = state.get(HINGE).cornerZ();
+		int maxX = minX;
+		int maxZ = minZ;
 		
-		minX += doorPlane.getOffsetZ() * 6;
-		maxX -= doorPlane.getOffsetZ() * 6;
-		minZ += doorPlane.getOffsetX() * 6;
-		maxZ -= doorPlane.getOffsetX() * 6;
+		int edgeX = minX + (planeDir.getOffsetX() * 16);
+		int edgeZ = minZ + (planeDir.getOffsetZ() * 16);
+		
+		edgeX += thicknessDir.getOffsetX() * 4;
+		edgeZ += thicknessDir.getOffsetZ() * 4;
+		
+		minX = Math.min(minX, edgeX);
+		maxX = Math.max(maxX, edgeX);
+		minZ = Math.min(minZ, edgeZ);
+		maxZ = Math.max(maxZ, edgeZ);
 		
 		return Block.createCuboidShape(minX, 0, minZ, maxX, 16, maxZ);
 	}
@@ -98,29 +93,52 @@ public class BigDoorBlock extends Block {
 	@Override
 	public BlockState getPlacementState(ItemPlacementContext ctx) {
 		BlockState result = getDefaultState();
-		result = result.with(AXIS, ctx.getPlayerFacing().rotateYClockwise().getAxis());
 		
+		// TODO: Maybe if the side of a block gets hit instead of the top, place the hinge "against" that block.
+		// TODO: Factor in whether there's empty space to the left or right of the block, then DEFAULT to this.
 		Hinge hinge = switch(ctx.getPlayerFacing()) {
-			case NORTH -> Hinge.MINUS;
-			case EAST  -> Hinge.MINUS;
-			case SOUTH -> Hinge.PLUS;
-			case WEST  -> Hinge.PLUS;
-			default -> Hinge.MINUS;
+			case NORTH -> Hinge.SOUTHWEST;
+			case EAST  -> Hinge.NORTHWEST;
+			case SOUTH -> Hinge.NORTHEAST;
+			case WEST  -> Hinge.SOUTHEAST;
+			default -> Hinge.SOUTHWEST;
 		};
-		result = result.with(HINGE, hinge);
+		result = result
+				.with(HINGE, hinge)
+				.with(SWING, Swing.RIGHT);
 		
+		return result;
+	}
+	
+	@Override
+	public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+		Swing desiredSwing = state.get(SWING).getOpposite();
 		
-		return result.with(UP, false).with(DOWN, false); //TODO: Look above and below for doors
+		//Search for root door block
+		BlockPos groundBlock = pos.down();
+		for(int i=0; i<MAX_SEARCH_DISTANCE; i++) {
+			if (!(world.getBlockState(groundBlock).getBlock() instanceof BigDoorBlock)) break;
+			groundBlock = groundBlock.down();
+			
+		}
+		
+		BlockPos doorPos = groundBlock.up();
+		for(int i=0; i<MAX_SEARCH_DISTANCE; i++) {
+			BlockState cur = world.getBlockState(doorPos);
+			if (!(cur.getBlock() instanceof BigDoorBlock)) break;
+			world.setBlockState(doorPos, cur.with(SWING, desiredSwing));
+			doorPos = doorPos.up();
+		}
+		
+		return ActionResult.SUCCESS;
 	}
 	
 	/**
-	 * Represents the direction the door is swung, perpendicular to its axis. So if "axis=z", then "swing=plus"
-	 * means that the door is currently swung open in the +x direction.
+	 * Represents the direction the door is swung, from the perspective of a person standing diagonally "behind" the hinge.
 	 */
 	public static enum Swing implements StringIdentifiable {
-		CLOSED("closed"),
-		PLUS("plus"),
-		MINUS("minus");
+		LEFT("left"),
+		RIGHT("right");
 		
 		private final String name;
 		private Swing(String name) {
@@ -134,26 +152,66 @@ public class BigDoorBlock extends Block {
 		
 		public static Swing forName(String name) {
 			return switch(name) {
-				case "closed" -> CLOSED;
-				case "plus" -> PLUS;
-				case "minus" -> MINUS;
-				default -> CLOSED;
+				case "left" -> LEFT;
+				case "right" -> RIGHT;
+				default -> RIGHT;
+			};
+		}
+		
+		public Swing getOpposite() {
+			return switch(this) {
+				case LEFT -> RIGHT;
+				case RIGHT -> LEFT;
 			};
 		}
 	}
 	
 	/**
-	 * Represents whether this is a "left door" or a "right door" relative to its axis. So if "axis=z", then
-	 * "hinge=minus" means that the hinge sits on the -z side of the door.
+	 * Represents the corner the door hinge sits in.
 	 */
 	public static enum Hinge implements StringIdentifiable {
-		MINUS("minus"),
-		PLUS("plus");
+		NORTHWEST("northwest", Direction.SOUTH, Direction.EAST,  0,  0),
+		NORTHEAST("northeast", Direction.WEST, Direction.SOUTH, 16,  0),
+		SOUTHEAST("southeast", Direction.NORTH, Direction.WEST, 16, 16),
+		SOUTHWEST("southwest", Direction.EAST, Direction.NORTH,  0, 16);
 		
 		private final String name;
-		private Hinge(String name) {
+		private final Direction rightDir;
+		private final Direction leftDir;
+		private final int cornerX;
+		private final int cornerZ;
+		private Hinge(String name, Direction right, Direction left, int cornerX, int cornerZ) {
 			this.name = name;
+			this.rightDir = right;
+			this.leftDir = left;
+			this.cornerX = cornerX;
+			this.cornerZ = cornerZ;
 		}
+		
+		public Direction right() {
+			return rightDir;
+		}
+		
+		public Direction left() {
+			return leftDir;
+		}
+		
+		public Direction getPlane(Swing hinge) {
+			return switch(hinge) {
+				case LEFT -> leftDir;
+				case RIGHT -> rightDir;
+			};
+		}
+		
+		public Direction getOpposing(Swing hinge) {
+			return switch(hinge) {
+				case LEFT -> rightDir;
+				case RIGHT -> leftDir;
+			};
+		}
+		
+		public int cornerX() { return cornerX; }
+		public int cornerZ() { return cornerZ; }
 		
 		@Override
 		public String asString() {
@@ -162,9 +220,11 @@ public class BigDoorBlock extends Block {
 		
 		public static Hinge forName(String name) {
 			return switch(name) {
-				case "minus" -> MINUS;
-				case "plus" -> PLUS;
-				default -> MINUS;
+				case "northwest" -> NORTHWEST;
+				case "northeast" -> NORTHEAST;
+				case "southeast" -> SOUTHEAST;
+				case "southwest" -> SOUTHWEST;
+				default -> NORTHWEST;
 			};
 		}
 	}

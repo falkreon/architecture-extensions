@@ -1,18 +1,35 @@
 {
     "variants": {
-        "axis=x,down=false,hinge=minus,swing=closed,up=false": {
-            "model": "architecture_extensions:block/peculiar/test_door",
+        "hinge=southwest,swing=right": {
+            "model": "architecture_extensions:block/peculiar/test_door_right",
             "y": 180
         },
-        "axis=z,down=false,hinge=minus,swing=closed,up=false": {
-            "model": "architecture_extensions:block/peculiar/test_door",
+        "hinge=northwest,swing=right": {
+            "model": "architecture_extensions:block/peculiar/test_door_right",
             "y": 270
         },
-        "axis=x,down=false,hinge=plus,swing=closed,up=false": {
-            "model": "architecture_extensions:block/peculiar/test_door"
+        "hinge=northeast,swing=right": {
+            "model": "architecture_extensions:block/peculiar/test_door_right",
+            "y": 0
         },
-        "axis=z,down=false,hinge=plus,swing=closed,up=false": {
-            "model": "architecture_extensions:block/peculiar/test_door",
+        "hinge=southeast,swing=right": {
+            "model": "architecture_extensions:block/peculiar/test_door_right",
+            "y": 90
+        },
+        "hinge=southwest,swing=left": {
+            "model": "architecture_extensions:block/peculiar/test_door_left",
+            "y": 180
+        },
+        "hinge=northwest,swing=left": {
+            "model": "architecture_extensions:block/peculiar/test_door_left",
+            "y": 270
+        },
+        "hinge=northeast,swing=left": {
+            "model": "architecture_extensions:block/peculiar/test_door_left",
+            "y": 0
+        },
+        "hinge=southeast,swing=left": {
+            "model": "architecture_extensions:block/peculiar/test_door_left",
             "y": 90
         }
     }

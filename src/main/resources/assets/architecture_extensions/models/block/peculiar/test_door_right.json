@@ -1,14 +1,14 @@
 {
 	"credit": "Made with Blockbench by Falkreon",
-	"textures": {
-		"0": "minecraft:block/acacia_planks",
-		"particle": "minecraft:block/acacia_planks"
-	},
 	"parent": "minecraft:block/block",
+	"textures": {
+		"0": "block/acacia_planks",
+		"particle": "block/acacia_planks"
+	},
 	"elements": [
 		{
-			"from": [0, 2, 7],
-			"to": [14, 14, 9],
+			"from": [0, 2, 1],
+			"to": [14, 14, 3],
 			"faces": {
 				"north": {"uv": [0, 2, 14, 14], "texture": "#0"},
 				"east": {"uv": [0, 2, 2, 14], "texture": "#0"},
@@ -18,8 +18,8 @@
 			}
 		},
 		{
-			"from": [-14, 2, 7],
-			"to": [0, 14, 9],
+			"from": [-14, 2, 1],
+			"to": [0, 14, 3],
 			"faces": {
 				"north": {"uv": [2, 2, 16, 14], "texture": "#0"},
 				"south": {"uv": [0, 2, 14, 14], "texture": "#0"},
@@ -29,8 +29,8 @@
 			}
 		},
 		{
-			"from": [0, 0, 6],
-			"to": [12, 2, 10],
+			"from": [0, 0, 0],
+			"to": [12, 2, 4],
 			"faces": {
 				"north": {"uv": [0, 14, 12, 16], "texture": "#0"},
 				"east": {"uv": [0, 14, 4, 16], "texture": "#0"},
@@ -40,8 +40,8 @@
 			}
 		},
 		{
-			"from": [0, 14, 6],
-			"to": [12, 16, 10],
+			"from": [0, 14, 0],
+			"to": [12, 16, 4],
 			"faces": {
 				"north": {"uv": [0, 14, 12, 16], "texture": "#0"},
 				"east": {"uv": [0, 14, 4, 16], "texture": "#0"},
@@ -51,8 +51,8 @@
 			}
 		},
 		{
-			"from": [-16, 0, 6],
-			"to": [0, 2, 10],
+			"from": [-16, 0, 0],
+			"to": [0, 2, 4],
 			"faces": {
 				"north": {"uv": [0, 14, 16, 16], "texture": "#0"},
 				"south": {"uv": [0, 14, 16, 16], "texture": "#0"},
@@ -62,8 +62,8 @@
 			}
 		},
 		{
-			"from": [-16, 14, 6],
-			"to": [0, 16, 10],
+			"from": [-16, 14, 0],
+			"to": [0, 16, 4],
 			"faces": {
 				"north": {"uv": [0, 14, 16, 16], "texture": "#0"},
 				"south": {"uv": [0, 14, 16, 16], "texture": "#0"},
@@ -73,8 +73,8 @@
 			}
 		},
 		{
-			"from": [12, 0, 6],
-			"to": [16, 16, 10],
+			"from": [12, 0, 0],
+			"to": [16, 16, 4],
 			"faces": {
 				"north": {"uv": [0, 0, 4, 16], "texture": "#0"},
 				"east": {"uv": [6, 0, 10, 16], "texture": "#0"},
@@ -85,8 +85,8 @@
 			}
 		},
 		{
-			"from": [-16, 2, 6],
-			"to": [-14, 14, 10],
+			"from": [-16, 2, 0],
+			"to": [-14, 14, 4],
 			"faces": {
 				"north": {"uv": [14, 2, 16, 14], "texture": "#0"},
 				"east": {"uv": [0, 2, 4, 14], "texture": "#0"},
